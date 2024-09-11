@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @Jumataka-creator
+- 👋 Hi, I’m @Pay with Pi-creator
 - 👀 I’m interested in ... roaming the world 
 - 🌱 I’m currently learning ...to build Apps,website, social media pages, business, computer programming, forex trading from crypto currency from Dean Malon!
 - 💞️ I’m looking to collaborate on ... variety of projects!
