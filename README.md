@@ -5,6 +5,6 @@
 - 📫 How to reach me ...contact mobile no:0658216873 Email jmbaruku021@gmail.com
 
 <!---
-Pythogoras-creator/Juma-creator is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Pythogoras-creator is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
 --->
