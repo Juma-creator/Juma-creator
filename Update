@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Other content of the page -->
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: info@example.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons a {
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+
+from urllib.parse import urlparse
+
+def is_valid_url(url):
+    parsed_url = urlparse(url)
+    return bool(parsed_url.scheme and parsed_url.netloc)
+
+# Example usage
+url = "https://www.example.com/path?query=value"
+print("Valid URL!" if is_valid_url(url) else "Invalid URL!")
+
+npm install validator
+
+const validator = require('validator');
+
+function isValidUrl(url) {
+    return validator.isURL(url);
+}
+
+// Example usage
+const url = "https://www.example.com/path?query=value";
+console.log(isValidUrl(url) ? "Valid URL!" : "Invalid URL!");
+
+<input type="text" id="urlInput" placeholder="Enter URL">
+<button onclick="validateUrl()">Validate URL</button>
+<p id="result"></p>
+
+<script>
+    function validateUrl() {
+        const url = document.getElementById('urlInput').value;
+        fetch('/validate-url', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ url })
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('result').innerText = data.isValid ? "Valid URL!" : "Invalid URL!";
+        });
+    }
+</script>
+
+const express = require('express');
+const bodyParser = require('body-parser');
+const validator = require('validator');
+
+const app = express();
+app.use(bodyParser.json());
+
+app.post('/validate-url', (req, res) => {
+    const { url } = req.body;
+    const isValid = validator.isURL(url);
+    res.json({ isValid });
+});
+
+app.listen(3000, () => {
+    console.log('Server is running on port 3000');
+});
+
+
+
+{
+  "database": {
+    "host": "localhost",
+    "port": 27017,
+    "name": "mydatabase"
+  },
+  "server": {
+    "port": 3000
+  },
+  "apiKeys": {
+    "service1": "your-api-key-here",
+    "service2": "your-api-key-here"
+  }
+}
+
+database:
+  host: localhost
+  port: 27017
+  name: mydatabase
+
+server:
+  port: 3000
+
+apiKeys:
+  service1: your-api-key-here
+  service2: your-api-key-here
+
+DATABASE_HOST=localhost
+DATABASE_PORT=27017
+DATABASE_NAME=mydatabase
+SERVER_PORT=3000
+API_KEY_SERVICE1=your-api-key-here
+API_KEY_SERVICE2=your-api-key-here
+
+module.exports = {
+  database: {
+    host: 'localhost',
+    port: 27017,
+    name: 'mydatabase'
+  },
+  server: {
+    port: 3000
+  },
+  apiKeys: {
+    service1: 'your-api-key-here',
+    service2: 'your-api-key-here'
+  }
+};
+
+
+Pay with Pi leading payment app
+Use Pay with pi for the fastest, most secure online and in-store payments! Pay for movie tickets, food, coffee, fashion, gas, and many more in Pay with Pi.
+
+Quick, easy, convenient and secure.
+
+**Send / Receive Payments**
+
+Pay in store or send money to friends. No need to carry cash or worry about loose change!
+
+**Online Top-Ups and Utility Bill Payments**
+
+Top-up your mobile phone, pay your utility and internet bills or settle your monthly insurance premiums bills through Pay with Pi.
+
+**Add Money to your Pay with Pi Wallet**
+
+Add money to your Pay with pi app via Pay&Go machines or transfer from multiple online banking apps cash-in at all Banks branches and agent world wide.
+
+**Explore Nearby**
+
+Explore places near you that accept payment through Pay with pi wallet. Cinemas, restaurants, coffee shops, supermarkets, and gas stations are all joining forces with Pay with Pi to make your life more connected and more mobile.
+
+Don’t forget to look out for great deals exclusively for Pay with pi users! Start enjoying the amazing benefits of Pay with Pi. Download it now.
