@@ -1,6 +1,4 @@
-.github-private/
-└── profile/
-    └── README.md
+
 # Welcome to Pay with Pi
 
 ## About Us
