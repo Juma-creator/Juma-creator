@@ -1,25 +1,36 @@
+function isValidUrl(string) {
+  try {
+    new URL(string);
+    return true;
+  } catch (err) {
+    return false;
+  }
+}
 
-# Welcome to Pay with Pi
+console.log(isValidUrl('https://paywithpi.com')); // true
+console.log(isValidUrl('invalid-url')); // false
+function isValidUrl(string) {
+  const regex = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
+  return regex.test(string);
+}
 
-## About Us
-Pay with Pi is dedicated to revolutionizing the way people make transactions by leveraging the power of Pi Network. Our mission is to create a seamless, secure, and user-friendly payment system that empowers individuals and businesses alike.
+console.log(isValidUrl('https://paywithpi.com')); // true
+console.log(isValidUrl('invalid-url')); // false
 
-## Our Projects
-- **Pi Wallet**: A secure and easy-to-use wallet for managing your Pi transactions.
-- **Pi Payment Gateway**: Integrate Pi payments into your website or app with our robust API.
-- **Pi Merchant Solutions**: Tools and resources for businesses to accept Pi payments effortlessly.
+const validator = require('validator');
 
-## Getting Started
-To get started with any of our projects, please refer to the respective repositories within our organization. Each repository contains detailed documentation to help you set up and use our tools effectively.
+console.log(validator.isURL('https://paywithpi.com')); // true
+console.log(validator.isURL('invalid-url')); // false
 
-## Contributing
-We welcome contributions from all members. If you're interested in contributing, please check out our contribution guidelines and code of conduct.
+function isValidHttpUrl(string) {
+  try {
+    const url = new URL(string);
+    return url.protocol === 'http:' || url.protocol === 'https:';
+  } catch (err) {
+    return false;
+  }
+}
 
-## Contact Us
-If you have any questions or need support, feel free to reach out to us via our support page or join our community forum.
+console.log(isValidHttpUrl('https://paywithpi.com')); // true
+console.log(isValidHttpUrl('ftp://paywithpi.com')); // false
 
-Thank you for being a part of Pay with Pi!
-
----
-
-*This README is visible only to members of the Pay with Pi organization.*
