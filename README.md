@@ -7,19 +7,19 @@ function isValidUrl(string) {
   }
 }
 
-console.log(isValidUrl('https://paywithpi.com')); // true
+console.log(isValidUrl('https://payWithpi.com')); // true
 console.log(isValidUrl('invalid-url')); // false
 function isValidUrl(string) {
   const regex = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
   return regex.test(string);
 }
 
-console.log(isValidUrl('https://paywithpi.com')); // true
+console.log(isValidUrl('https://payWithpi.com')); // true
 console.log(isValidUrl('invalid-url')); // false
 
 const validator = require('validator');
 
-console.log(validator.isURL('https://paywithpi.com')); // true
+console.log(validator.isURL('https://payWithpi.com')); // true
 console.log(validator.isURL('invalid-url')); // false
 
 function isValidHttpUrl(string) {
@@ -31,6 +31,6 @@ function isValidHttpUrl(string) {
   }
 }
 
-console.log(isValidHttpUrl('https://paywithpi.com')); // true
-console.log(isValidHttpUrl('ftp://paywithpi.com')); // false
+console.log(isValidHttpUrl('https://payWithpi.com')); // true
+console.log(isValidHttpUrl('ftp://payWithpi.com')); // false
 
