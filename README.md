@@ -1,36 +1,26 @@
-function isValidUrl(string) {
-  try {
-    new URL(string);
-    return true;
-  } catch (err) {
-    return false;
-  }
-}
+Pay with Pi leading payment app
+Use Pay with pi for the fastest, most secure online and in-store payments! Pay for movie tickets, food, coffee, fashion, gas, and many more in Pay with Pi.
 
-console.log(isValidUrl('https://payWithpi.com')); // true
-console.log(isValidUrl('invalid-url')); // false
-function isValidUrl(string) {
-  const regex = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
-  return regex.test(string);
-}
+Quick, easy, convenient and secure.
 
-console.log(isValidUrl('https://payWithpi.com')); // true
-console.log(isValidUrl('invalid-url')); // false
+**Send / Receive Payments**
 
-const validator = require('validator');
+Pay in store or send money to friends. No need to carry cash or worry about loose change!
 
-console.log(validator.isURL('https://payWithpi.com')); // true
-console.log(validator.isURL('invalid-url')); // false
+**Online Top-Ups and Utility Bill Payments**
 
-function isValidHttpUrl(string) {
-  try {
-    const url = new URL(string);
-    return url.protocol === 'http:' || url.protocol === 'https:';
-  } catch (err) {
-    return false;
-  }
-}
+Top-up your mobile phone, pay your utility and internet bills or settle your monthly insurance premiums bills through Pay with Pi.
 
-console.log(isValidHttpUrl('https://payWithpi.com')); // true
-console.log(isValidHttpUrl('ftp://payWithpi.com')); // false
+**Add Money to your Pay with Pi Wallet**
+
+Add money to your Pay with pi app via Pay&Go machines or transfer from multiple online banking apps cash-in at all Banks branches and agent world wide.
+
+**Explore Nearby**
+
+Explore places near you that accept payment through Pay with pi wallet. Cinemas, restaurants, coffee shops, supermarkets, and gas stations are all joining forces with Pay with Pi to make your life more connected and more mobile.
+
+Don’t forget to look out for great deals exclusively for Pay with pi users! Start enjoying the amazing benefits of Pay with Pi. Download it now..
+
+
+https://forms.gle/NBzpicuQ1SXQSH4e6
 
