@@ -1,0 +1,92 @@
+# Add your API key here:
+PI_API_KEY=PI_API_KEY=pv2d9bwzouf4lot4kb81tdzugaj9h3m0vm0rfqt3erhb1uuriwufaqzece3qh7t3
+
+# Add your session secret here:
+SESSION_SECRET=f7d8531b796b28a6223d7045dc9e437cc6f1a8b07932db982885dc293f6855d55c8cd09739ab0f2e24b74797ee5dbb5a999eba3e602b0d69304f1c3df0eb6ed0
+
+Validation-key. Txt
+https://paywithpi.com/Validation-key.Txt
+#Add your API key here:f7d8531b796b28a6223d7045dc9e437cc6f1a8b07932db982885dc293f6855d55c8cd09739ab0f2e24b74797ee5dbb5a999eba3e602b0d69304f1c3df0eb6ed0
+
+
+# Add your API key here:
+Pay with Pi_API_KEY=h3wzrsvaz58crsohenawqz3eib8jldh4bnfg8xdmsvouv5mbxl1qomb0vbp7xlag
+
+# Add your session secret here:
+SESSION_SECRET=1b7af176827adb2cd0daa1edfc56bace7261b49819e430f2e38dc2070b7c01814e0e21cddc438714435b4fa1aacca00479132c6edb9d15baaf46796a3a44d6f3
+
+
+{
+  "_links": {
+    "self": {
+      "href": "https://api.mainnet.minepi.com/accounts/GBBB3DGTFM5AGPCJIIBH5QGSBLVEBB4GKQ7AV2JDT2ITMU7ZQKKOA2N7"
+    },
+    "transactions": {
+      "href": "https://api.mainnet.minepi.com/accounts/GBBB3DGTFM5AGPCJIIBH5QGSBLVEBB4GKQ7AV2JDT2ITMU7ZQKKOA2N7/transactions{?cursor,limit,order}",
+      "templated": true
+    },
+    "operations": {
+      "href": "https://api.mainnet.minepi.com/accounts/GBBB3DGTFM5AGPCJIIBH5QGSBLVEBB4GKQ7AV2JDT2ITMU7ZQKKOA2N7/operations{?cursor,limit,order}",
+      "templated": true
+    },
+    "payments": {
+      "href": "https://api.mainnet.minepi.com/accounts/GBBB3DGTFM5AGPCJIIBH5QGSBLVEBB4GKQ7AV2JDT2ITMU7ZQKKOA2N7/payments{?cursor,limit,order}",
+      "templated": true
+    },
+    "effects": {
+      "href": "https://api.mainnet.minepi.com/accounts/GBBB3DGTFM5AGPCJIIBH5QGSBLVEBB4GKQ7AV2JDT2ITMU7ZQKKOA2N7/effects{?cursor,limit,order}",
+      "templated": true
+    },
+    "offers": {
+      "href": "https://api.mainnet.minepi.com/accounts/GBBB3DGTFM5AGPCJIIBH5QGSBLVEBB4GKQ7AV2JDT2ITMU7ZQKKOA2N7/offers{?cursor,limit,order}",
+      "templated": true
+    },
+    "trades": {
+      "href": "https://api.mainnet.minepi.com/accounts/GBBB3DGTFM5AGPCJIIBH5QGSBLVEBB4GKQ7AV2JDT2ITMU7ZQKKOA2N7/trades{?cursor,limit,order}",
+      "templated": true
+    },
+    "data": {
+      "href": "https://api.mainnet.minepi.com/accounts/GBBB3DGTFM5AGPCJIIBH5QGSBLVEBB4GKQ7AV2JDT2ITMU7ZQKKOA2N7/data/{key}",
+      "templated": true
+    }
+  },
+  "id": "GBBB3DGTFM5AGPCJIIBH5QGSBLVEBB4GKQ7AV2JDT2ITMU7ZQKKOA2N7",
+  "account_id": "GBBB3DGTFM5AGPCJIIBH5QGSBLVEBB4GKQ7AV2JDT2ITMU7ZQKKOA2N7",
+  "sequence": "14441973562198312",
+  "subentry_count": 0,
+  "last_modified_ledger": 17326236,
+  "last_modified_time": "2024-10-21T15:49:58Z",
+  "thresholds": {
+    "low_threshold": 0,
+    "med_threshold": 0,
+    "high_threshold": 0
+  },
+  "flags": {
+    "auth_required": false,
+    "auth_revocable": false,
+    "auth_immutable": false,
+    "auth_clawback_enabled": false
+  },
+  "balances": [
+    {
+      "balance": "58583234.9568162",
+      "buying_liabilities": "0.0000000",
+      "selling_liabilities": "0.0000000",
+      "asset_type": "native"
+    }
+  ],
+  "signers": [
+    {
+      "weight": 1,
+      "key": "GBBB3DGTFM5AGPCJIIBH5QGSBLVEBB4GKQ7AV2JDT2ITMU7ZQKKOA2N7",
+      "type": "ed25519_public_key"
+    }
+  ],
+  "data": {},
+  "num_sponsoring": 14421790,
+  "num_sponsored": 0,
+  "paging_token": "GBBB3DGTFM5AGPCJIIBH5QGSBLVEBB4GKQ7AV2JDT2ITMU7ZQKKOA2N7"
+}
+
+
+
