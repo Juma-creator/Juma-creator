@@ -9,7 +9,7 @@ touch README.md .gitignore
 
 touch .env
 
-DATABASE_URL=postgresql://user:password@localhost:5432/mydatabase
+DATABASE_URL=postgresql://user:#Miracle2602@localhost:5432/mydatabase
 API_KEY=wgzuxn4pdezkqgu2bihwortnynjbearrtbqnnkjm9ofxfjk14ksoyoc78e1fkgtu
 
 pip install virtualenv
