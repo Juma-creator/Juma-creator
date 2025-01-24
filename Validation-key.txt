@@ -1,0 +1,151 @@
+
+import uuid
+
+def generate_verification_code():
+    return str(uuid.uuid4())
+
+verification_code = generate_verification_code()
+print("Verification Code:", verification_code)
+
+import dns.resolver
+
+def verify_dns_record(domain, prefix, code):
+    try:
+        answers = dns.resolver.resolve(f"{prefix}.{domain}", 'TXT')
+        for rdata in answers:
+            if rdata.to_text().strip('"') == code:
+                return True
+        return False
+    except (dns.resolver.NoAnswer, dns.resolver.NXDOMAIN):
+        return False
+
+domain = "paywithpi.com"  # Replace with your domain
+prefix = "_pi-verification"
+code = "f7d8531b796b28a6223d7045dc9e437cc6f1a8b07932db982885dc293f6855d55c8cd09739ab0f2e24b74797ee5dbb5a999eba3e602b0d69304f1c3df0eb6ed0"  
+
+if verify_dns_record(domain, prefix, code):
+    print("Domain ownership verified!")
+else:
+    print("Domain ownership verification failed.")
+import requests
+
+def verify_file_accessibility(url):
+    response = requests.get(url)
+    if response.status_code == 200:
+        print("File is accessible!")
+        print("Content:", response.text)
+    else:
+        print(f"Failed to access the file. Status code: {response.status_code}")
+
+url = "https://paywithpi.com/validation-key.txt"
+verify_file_accessibility(url)
+
+
+
+import uuid
+
+def generate_meta_tag():
+    verification_code = str(uuid.uuid4())
+    meta_tag = f'<meta name="verification" content="{verification_code}">'
+    return meta_tag, verification_code
+
+meta_tag, verification_code = generate_meta_tag()
+print("Meta Tag:", meta_tag)
+print("Verification Code:", verification_code)
+
+
+<head>
+    <meta name="verification" content="f7d8531b796b28a6223d7045dc9e437cc6f1a8b07932db982885dc293f6855d55c8cd09739ab0f2e24b74797ee5dbb5a999eba3e602b0d69304f1c3df0eb6ed0">
+</head>
+
+import requests
+from bs4 import BeautifulSoup
+
+def verify_meta_tag(domain, expected_code):
+    url = f'http://{domain}'
+    response = requests.get(url)
+    soup = BeautifulSoup(response.content, 'html.parser')
+    meta_tag = soup.find('meta', attrs={'name': 'verification'})
+
+    if meta_tag and meta_tag['content'] == expected_code:
+        return True
+    return False
+
+domain = "paywithpi.com"  # Replace with your domain
+expected_code = "f7d8531b796b28a6223d7045dc9e437cc6f1a8b07932db982885dc293f6855d55c8cd09739ab0f2e24b74797ee5dbb5a999eba3e602b0d69304f1c3df0eb6ed0" 
+
+if verify_meta_tag(domain, expected_code):
+    print("Meta tag verification successful!")
+else:
+    print("Meta tag verification failed.")
+
+import uuid
+
+def generate_html_file():
+    verification_code = str(uuid.uuid4())
+    html_content = f'<html><body>Verification code: {verification_code}</body></html>'
+    file_name = "verification.html"
+    
+    with open(file_name, 'w') as file:
+        file.write(html_content)
+    
+    return file_name, verification_code
+
+file_name, verification_code = generate_html_file()
+print(f'File created: {file_name}')
+print(f'Verification code: {verification_code}')
+
+import requests
+
+def verify_html_file(domain, expected_code):
+    url = f'http://{domain}/verification.html'
+    response = requests.get(url)
+
+    if expected_code in response.text:
+        return True
+    return False
+
+domain = "paywithpi.com"  # Replace with your domain
+expected_code = "f7d8531b796b28a6223d7045dc9e437cc6f1a8b07932db982885dc293f6855d55c8cd09739ab0f2e24b74797ee5dbb5a999eba3e602b0d69304f1c3df0eb6ed0" 
+
+if verify_html_file(domain, expected_code):
+    print("HTML file verification successful!")
+else:
+    print("HTML file verification failed.")
+
+import uuid
+
+def generate_html_file():
+    verification_code = str(uuid.uuid4())
+    html_content = f'<html><body>Verification code: {verification_code}</body></html>'
+    file_name = "verification.html"
+    
+    with open(file_name, 'w') as file:
+        file.write(html_content)
+    
+    return file_name, verification_code
+
+file_name, verification_code = generate_html_file()
+print(f'File created: {file_name}')
+print(f'Verification code: {verification_code}')
+
+import requests
+
+def verify_html_file(domain, expected_code):
+    url = f'http://{domain}/verification.html'
+    response = requests.get(url)
+
+    if expected_code in response.text:
+        return True
+    return False
+
+domain = "paywithpi.com"  # Replace with your domain
+expected_code = "f7d8531b796b28a6223d7045dc9e437cc6f1a8b07932db982885dc293f6855d55c8cd09739ab0f2e24b74797ee5dbb5a999eba3e602b0d69304f1c3df0eb6ed0"
+
+if verify_html_file(domain, expected_code):
+    print("HTML file verification successful!")
+else:
+    print("HTML file verification failed.")
+
+
+
