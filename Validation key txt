@@ -88,5 +88,96 @@ SESSION_SECRET=1b7af176827adb2cd0daa1edfc56bace7261b49819e430f2e38dc2070b7c01814
   "paging_token": "GBBB3DGTFM5AGPCJIIBH5QGSBLVEBB4GKQ7AV2JDT2ITMU7ZQKKOA2N7"
 }
 
+import uuid
+import requests
+from bs4 import BeautifulSoup
+import dns.resolver
+
+# Generate a UUID for verification
+def generate_verification_code():
+    return str(uuid.uuid4())
+
+# DNS Verification
+def verify_dns_record(domain, prefix, code):
+    try:
+        answers = dns.resolver.resolve(f"{prefix}.{domain}", 'TXT')
+        for rdata in answers:
+            if rdata.to_text().strip('"') == code:
+                return True
+        return False
+    except (dns.resolver.NoAnswer, dns.resolver.NXDOMAIN) as e:
+        print(f"DNS error: {e}")
+        return False
+
+# File Accessibility Verification
+def verify_file_accessibility(url, expected_code):
+    try:
+        response = requests.get(url, timeout=10)
+        if response.status_code == 200 and expected_code in response.text:
+            print("File verification successful!")
+            return True
+        else:
+            print(f"File verification failed. Status code: {response.status_code}")
+            return False
+    except requests.RequestException as e:
+        print(f"File request error: {e}")
+        return False
+
+# Meta Tag Verification
+def verify_meta_tag(domain, expected_code):
+    try:
+        url = f"http://{domain}"
+        response = requests.get(url, timeout=10)
+        soup = BeautifulSoup(response.content, 'html.parser')
+        meta_tag = soup.find('meta', attrs={'name': 'verification'})
+
+        if meta_tag and meta_tag['content'] == expected_code:
+            return True
+        return False
+    except requests.RequestException as e:
+        print(f"Meta tag request error: {e}")
+        return False
+
+# Generate and Save an HTML Verification File
+def generate_html_file(verification_code):
+    file_name = "verification.html"
+    html_content = f"<html><body>Verification code: {verification_code}</body></html>"
+
+    with open(file_name, 'w') as file:
+        file.write(html_content)
+
+    return file_name
+
+# Verification Flow
+def main():
+    # Domain and prefix setup
+    domain = "paywithpi.com"
+    prefix = "_pi-verification"
+
+    # Generate a verification code
+    verification_code = generate_verification_code()
+    print(f"Generated Verification Code: {f7d8531b796b28a6223d7045dc9e437cc6f1a8b07932db982885dc293f6855d55c8cd09739ab0f2e24b74797ee5dbb5a999eba3e602b0d69304f1c3df0eb6ed0}")
+
+    # DNS Verification
+    if verify_dns_record(domain, prefix, verification_code):
+        print("DNS verification successful!")
+    else:
+        print("DNS verification failed.")
+
+    # File Verification
+    file_url = f"http://{domain}/verification.html"
+    if verify_file_accessibility(file_url, verification_code):
+        print("File verification successful!")
+    else:
+        print("File verification failed.")
+
+    # Meta Tag Verification
+    if verify_meta_tag(domain, verification_code):
+        print("Meta tag verification successful!")
+    else:
+        print("Meta tag verification failed.")
+
+if __name__ == "__main__":
+    main()
 
 
