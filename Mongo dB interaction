@@ -1,0 +1,93 @@
+mkdir my-mongodb-app
+cd my-mongodb-app
+
+npm init -y
+
+npm install mongodb
+
+const { MongoClient } = require('mongodb');
+
+// Connection URL
+const url = 'mongodb://localhost:27017';
+
+// Database Name
+const dbName = 'myDatabase';
+
+// Connect to MongoDB
+const client = new MongoClient(url);
+
+async function main() {
+    try {
+        await client.connect();
+        console.log('Connected to MongoDB');
+        
+        const db = client.db(dbName);
+        
+        // Perform operations on the database
+        const collection = db.collection('myCollection');
+        
+        // Insert a document
+        await collection.insertOne({ name: 'John Doe', age: 30 });
+        
+        console.log('Document inserted');
+    } catch (err) {
+        console.error(err);
+    } finally {
+        await client.close();
+    }
+}
+
+main();
+
+touch app.js
+
+node app.js
+git checkout -b add-mongodb-setup
+const { MongoClient } = require('mongodb');
+
+// Connection URL
+const url = 'mongodb://localhost:27017';
+
+// Database Name
+const dbName = 'myDatabase';
+
+// Connect to MongoDB
+const client = new MongoClient(url);
+
+async function main() {
+    try {
+        await client.connect();
+        console.log('Connected to MongoDB');
+        
+        const db = client.db(dbName);
+        
+        // Perform operations on the database
+        const collection = db.collection('myCollection');
+        
+        // Insert a document
+        await collection.insertOne({ name: 'John Doe', age: 30 });
+        
+        console.log('Document inserted');
+    } catch (err) {
+        console.error(err);
+    } finally {
+        await client.close();
+    }
+}
+
+main();
+
+git add app.js
+
+git commit -m "Add MongoDB setup to app.js"
+
+git push origin add-mongodb-setup
+
+git branch -r
+
+git checkout branch_name
+git merge add-mongodb-setup
+git push origin branch_name
+
+
+
