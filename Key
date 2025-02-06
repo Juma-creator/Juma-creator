@@ -1,0 +1,8 @@
+gpg --list-secret-keys --keyid-format=long
+
+$ gpg --list-secret-keys --keyid-format=long
+/Users/hubot/.gnupg/secring.gpg
+------------------------------------
+sec   4096R/3AA5C34371567BD2 2024-03-10 [expires: 2035-03-10]
+uid                          Hubot <hubot@paywithpi.com>
+ssb   4096R/4BB6D45482678BE3 2035-03-10
